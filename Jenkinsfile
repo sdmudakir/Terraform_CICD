@@ -8,19 +8,19 @@ pipeline {
             }
         }
         
-        stage('Terraform Init') {
+        stage('terraform Init') {
             steps {
                 sh 'terraform init'
             }
         }
 
-        stage('Terraform Plan') {
+        stage('terraform Plan') {
             steps {
                 sh 'terraform plan'
             }
         }
 
-        stage('Terraform Apply') {
+        stage('terraform Apply') {
             steps {
                 sh 'terraform apply -auto-approve'
             }

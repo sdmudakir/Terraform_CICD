@@ -8,8 +8,8 @@ terraform {
 }
 
 resource "aws_instance" "dev" {
-    ami = "ami-0c614dee691cbbf37"
-    instance_type = "t2.nano"
+    ami = "ami-085ad6ae776d8f09c"
+    instance_type = "t2.micro"
     key_name = "Multicloud"
     tags = {
       Name = "dev123"

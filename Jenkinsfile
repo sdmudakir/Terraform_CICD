@@ -2,16 +2,16 @@ pipeline {
     agent any
 
     stages {
-        stage('Git Checkout') {
+        stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'git@github.com:sdmudakir/Terraform_CICD.git'
+                git branch: 'main', url: 'https://github.com/sdmudakir/Terraform_CICD.git'
             }
         }
-        stage('terraform Init') {
+        
+        stage('Terraform Init') {
             steps {
-                sh 'terraform init'
+                sh 'terraform init -reconfigure'
             }
         }
     }
 }
-

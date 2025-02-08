@@ -12,6 +12,6 @@ resource "aws_instance" "dev" {
     instance_type = "t2.micro"
     key_name = "Multicloud"
     tags = {
-      Name = "dev"
+      Name = "dev123456"
     }
 }
